@@ -53,12 +53,12 @@
             <Font name="System Bold" size="14.0" />
           </font>
         </Label>
-        <Button fx:id="loginButton" layoutX="48.0" layoutY="292.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefWidth="275.0" style="-fx-background-color: black;" text="LOG IN" textFill="WHITE">
+        <Button fx:id="loginButton" layoutX="48.0" layoutY="292.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefWidth="275.0" style="-fx-background-color: #79595C;" text="LOG IN" textFill="WHITE">
           <padding>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
           </padding>
         </Button>
-            <Button fx:id="cancelButton" layoutX="48.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefWidth="275.0" style="-fx-background-color: red;" text="CANCEL" textFill="WHITE">
+            <Button fx:id="cancelButton" layoutX="48.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefWidth="275.0" style="-fx-background-color: #E79D97;" text="CANCEL" textFill="BLACK">
                <padding>
                   <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
                </padding>
