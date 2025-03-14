@@ -15,9 +15,32 @@ public class RegisterController {
 
     @FXML
     private Button closeButton;
+    @FXML
+    private Label registrationMessageLabel;
+    @FXML
+    private Label confirmPasswordLabel;
+    @FXML
+    private PasswordField setPasswordField;
+    @FXML
+    private PasswordField confirmPasswordField;
+
+    public void registerButtonOnAction(ActionEvent event) {
+        registrationMessageLabel.setText("User has been registered successfully.");
+        registerUser();
+    }
 
     public void closeButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
+    }
+
+    public void registerUser() {
+
+        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
+            confirmPasswordLabel.setText("You are set.");
+        } else {
+            confirmPasswordLabel.setText("Password do not match.");
+
+        }
     }
 }
