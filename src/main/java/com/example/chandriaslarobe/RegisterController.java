@@ -1,5 +1,6 @@
 package com.example.chandriaslarobe;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,24 +24,52 @@ public class RegisterController {
     private PasswordField setPasswordField;
     @FXML
     private PasswordField confirmPasswordField;
+    @FXML
+    private TextField firstNameTextField;
+    @FXML
+    private TextField lastNameTextField;
+    @FXML
+    private TextField usernameTextField;
 
     public void registerButtonOnAction(ActionEvent event) {
-        registrationMessageLabel.setText("User has been registered successfully.");
-        registerUser();
+
+        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
+            registerUser();
+            confirmPasswordLabel.setText("");
+        } else {
+            confirmPasswordLabel.setText("Password do not match.");
+
+        }
     }
 
     public void closeButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
+        Platform.exit();
     }
 
     public void registerUser() {
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectDB = connectNow.getConnection();
 
-        if (setPasswordField.getText().equals(confirmPasswordField.getText())) {
-            confirmPasswordLabel.setText("You are set.");
-        } else {
-            confirmPasswordLabel.setText("Password do not match.");
+        String firstname = firstNameTextField.getText();
+        String lastname = lastNameTextField.getText();
+        String username = usernameTextField.getText();
+        String password = setPasswordField.getText();
 
+        String InsertFields = "INSERT INTO user_account(lastname, firstname, username, password) VALUES ('";
+        String insertValues = firstname + "','" + lastname + "','" + username + "','" + password + "'";
+        String insertToRegister = InsertFields + insertValues;
+
+        try{
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(insertToRegister);
+
+            registrationMessageLabel.setText("User has been registered successfully.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
         }
     }
 }
