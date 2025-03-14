@@ -79,6 +79,7 @@ public class LoginController {
             registerStage.setScene(scene);
             registerStage.show();
 
+
         } catch (Exception e) {
             e.printStackTrace();
             e.getCause();
