@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ECECE7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <left>
     <AnchorPane prefHeight="400.0" prefWidth="0.0" BorderPane.alignment="CENTER">
       <children>
@@ -32,18 +31,18 @@
             <Image url="@img/logo.png" />
           </image>
         </ImageView>
-        <Label layoutX="48.0" layoutY="162.0" text="USERNAME" />
-        <TextField alignment="TOP_LEFT" layoutX="48.0" layoutY="180.0" style="-fx-border-color: BLACK;">
+        <Label layoutX="48.0" layoutY="139.0" text="USERNAME" />
+        <TextField alignment="TOP_LEFT" layoutX="48.0" layoutY="157.0" style="-fx-border-color: BLACK;">
           <padding>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
           </padding>
         </TextField>
-        <PasswordField layoutX="48.0" layoutY="251.0" style="-fx-border-color: black;">
+        <PasswordField layoutX="48.0" layoutY="228.0" style="-fx-border-color: black;">
           <padding>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
           </padding>
         </PasswordField>
-        <Label layoutX="48.0" layoutY="233.0" text="PASSWORD" />
+        <Label layoutX="48.0" layoutY="210.0" text="PASSWORD" />
         <Label layoutX="168.0" layoutY="50.0" text="GOWN AND SUIT">
           <font>
             <Font name="System Bold" size="14.0" />
@@ -54,11 +53,16 @@
             <Font name="System Bold" size="14.0" />
           </font>
         </Label>
-        <Button layoutX="99.0" layoutY="325.0" mnemonicParsing="false" text="Button">
+        <Button layoutX="48.0" layoutY="292.0" mnemonicParsing="false" prefWidth="275.0" style="-fx-background-color: black;" text="LOG IN" textFill="WHITE">
           <padding>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
           </padding>
         </Button>
+            <Button layoutX="48.0" layoutY="342.0" mnemonicParsing="false" prefWidth="275.0" style="-fx-background-color: red;" text="CANCEL" textFill="WHITE">
+               <padding>
+                  <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
+               </padding>
+            </Button>
       </children>
     </AnchorPane>
   </right>
