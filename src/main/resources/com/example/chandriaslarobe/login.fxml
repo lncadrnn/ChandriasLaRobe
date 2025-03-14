@@ -26,43 +26,44 @@
   <right>
     <AnchorPane prefHeight="400.0" prefWidth="397.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
       <children>
-        <ImageView fitHeight="91.0" fitWidth="88.0" layoutX="48.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="74.0" fitWidth="75.0" layoutX="42.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
           <image>
             <Image url="@img/logo.png" />
           </image>
         </ImageView>
         <Label layoutX="48.0" layoutY="139.0" text="USERNAME" />
-        <TextField alignment="TOP_LEFT" layoutX="48.0" layoutY="157.0" style="-fx-border-color: BLACK;">
+        <TextField fx:id="usernameTextField" alignment="TOP_LEFT" layoutX="48.0" layoutY="157.0" promptText="Username" style="-fx-border-color: BLACK;">
           <padding>
-            <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
+            <Insets bottom="7.0" left="10.0" right="130.0" top="7.0" />
           </padding>
         </TextField>
-        <PasswordField layoutX="48.0" layoutY="228.0" style="-fx-border-color: black;">
+        <PasswordField fx:id="enterPasswordField" layoutX="48.0" layoutY="228.0" promptText="Password" style="-fx-border-color: black;">
           <padding>
-            <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
+            <Insets bottom="7.0" left="10.0" right="130.0" top="7.0" />
           </padding>
         </PasswordField>
         <Label layoutX="48.0" layoutY="210.0" text="PASSWORD" />
-        <Label layoutX="168.0" layoutY="50.0" text="GOWN AND SUIT">
+        <Label layoutX="158.0" layoutY="44.0" text="GOWN AND SUIT">
           <font>
             <Font name="System Bold" size="14.0" />
           </font>
         </Label>
-        <Label layoutX="146.0" layoutY="70.0" text="MANAGEMENT SYSTEM">
+        <Label layoutX="136.0" layoutY="64.0" text="MANAGEMENT SYSTEM">
           <font>
             <Font name="System Bold" size="14.0" />
           </font>
         </Label>
-        <Button layoutX="48.0" layoutY="292.0" mnemonicParsing="false" prefWidth="275.0" style="-fx-background-color: black;" text="LOG IN" textFill="WHITE">
+        <Button fx:id="loginButton" layoutX="48.0" layoutY="292.0" mnemonicParsing="false" prefWidth="275.0" style="-fx-background-color: black;" text="LOG IN" textFill="WHITE">
           <padding>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
           </padding>
         </Button>
-            <Button layoutX="48.0" layoutY="342.0" mnemonicParsing="false" prefWidth="275.0" style="-fx-background-color: red;" text="CANCEL" textFill="WHITE">
+            <Button fx:id="cancelButton" layoutX="48.0" layoutY="342.0" mnemonicParsing="false" prefWidth="275.0" style="-fx-background-color: red;" text="CANCEL" textFill="WHITE">
                <padding>
                   <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
                </padding>
             </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="114.0" prefHeight="17.0" prefWidth="323.0" text="Invalid Login. Please try again." textFill="RED" />
       </children>
     </AnchorPane>
   </right>
