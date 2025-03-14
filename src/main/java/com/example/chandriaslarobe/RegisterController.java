@@ -57,9 +57,9 @@ public class RegisterController {
         String username = usernameTextField.getText();
         String password = setPasswordField.getText();
 
-        String InsertFields = "INSERT INTO user_account(lastname, firstname, username, password) VALUES ('";
-        String insertValues = firstname + "','" + lastname + "','" + username + "','" + password + "'";
-        String insertToRegister = InsertFields + insertValues;
+        String insertFields = "INSERT INTO user_account(firstname, lastname, username, password) VALUES (";
+        String insertValues = "'" + firstname + "','" + lastname + "','" + username + "','" + password + "')";
+        String insertToRegister = insertFields + insertValues;
 
         try{
             Statement statement = connectDB.createStatement();
