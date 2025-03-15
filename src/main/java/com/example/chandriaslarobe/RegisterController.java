@@ -58,6 +58,7 @@ public class RegisterController {
         registerStage.setResizable(false);
         registerStage.setScene(scene);
         registerStage.show();
+        registerStage.setY(registerStage.getY() - -60);
 
         // Stage stage = (Stage) closeButton.getScene().getWindow();
         // stage.close();

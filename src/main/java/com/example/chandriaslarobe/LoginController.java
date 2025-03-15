@@ -73,6 +73,7 @@ public class LoginController {
             stage.setScene(new Scene(registerRoot, 600, 532));
             stage.setTitle("Sign Up");
             stage.show();
+            stage.setY(stage.getY() - 60);
 
         } catch (Exception e) {
             e.printStackTrace();
