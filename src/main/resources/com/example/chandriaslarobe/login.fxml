@@ -57,11 +57,17 @@
           <padding>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
           </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
         </Button>
-            <Button fx:id="registerHereButton" layoutX="48.0" layoutY="342.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefWidth="275.0" style="-fx-background-color: #E79D97;" text="REGISTER HERE" textFill="BLACK">
+            <Button fx:id="registerHereButton" layoutX="48.0" layoutY="342.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefWidth="275.0" style="-fx-background-color: #E79D97;" text="SIGN UP" textFill="BLACK">
                <padding>
                   <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
                </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
             </Button>
             <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="114.0" prefHeight="17.0" prefWidth="323.0" textFill="RED" />
       </children>

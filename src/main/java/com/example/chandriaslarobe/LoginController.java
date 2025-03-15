@@ -2,6 +2,8 @@ package com.example.chandriaslarobe;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,6 +15,7 @@ import javafx.stage.StageStyle;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.EventObject;
 
 
 public class LoginController {
@@ -35,7 +38,7 @@ public class LoginController {
     }
 
     public void registerButtonOnAction(ActionEvent event) {
-        createAccountForm();
+        createAccountForm(event);
     }
 
     public void validateLogin() {
@@ -50,7 +53,7 @@ public class LoginController {
 
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
-                    //loginMessageLabel.setText("You are logged in.");
+                    loginMessageLabel.setText("You are logged in.");
                 } else {
                     loginMessageLabel.setText("Invalid username or password.");
                 }
@@ -63,17 +66,13 @@ public class LoginController {
 
     }
 
-    public void createAccountForm() {
+    public void createAccountForm(ActionEvent event) {
         try {
-
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("register.fxml"));
-            //new stage
-            Stage registerStage = new Stage();
-            Scene scene = new Scene(fxmlLoader.load(), 600, 532);
-            registerStage.initStyle(StageStyle.UNDECORATED);
-            registerStage.setScene(scene);
-            registerStage.show();
-
+            Parent registerRoot = FXMLLoader.load(getClass().getResource("register.fxml"));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(registerRoot, 600, 532));
+            stage.setTitle("Sign Up");
+            stage.show();
 
         } catch (Exception e) {
             e.printStackTrace();

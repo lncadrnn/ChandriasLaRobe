@@ -14,12 +14,12 @@
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="600.0" style="-fx-background-color: E79D97;">
          <children>
-            <ImageView fitHeight="56.0" fitWidth="62.0" layoutX="36.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="56.0" fitWidth="62.0" layoutX="20.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/registration.png" />
                </image>
             </ImageView>
-            <Label layoutX="103.0" layoutY="27.0" text="USER REGISTRATION" textFill="#79595c">
+            <Label layoutX="87.0" layoutY="27.0" text="USER REGISTRATION" textFill="#79595c">
                <font>
                   <Font name="System Bold" size="19.0" />
                </font>
@@ -56,15 +56,21 @@
          </padding>
       </PasswordField>
       <Label layoutX="108.0" layoutY="335.0" text="Confirm Password" />
-      <Button fx:id="registerButton" layoutX="116.0" layoutY="408.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="30.0" prefWidth="380.0" style="-fx-background-color: #79595C;" text="Register" textFill="WHITE">
+      <Button fx:id="registerButton" layoutX="116.0" layoutY="408.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="30.0" prefWidth="380.0" style="-fx-background-color: #79595C;" text="REGISTER" textFill="WHITE">
          <opaqueInsets>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
          </opaqueInsets>
          <padding>
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
          </padding>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="116.0" layoutY="461.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="30.0" prefWidth="380.0" style="-fx-background-color: #E79D97;" text="Cancel" />
+      <Button fx:id="backToLoginButton" layoutX="116.0" layoutY="461.0" mnemonicParsing="false" onAction="#backToLoginButtonOnAction" prefHeight="30.0" prefWidth="380.0" style="-fx-background-color: #E79D97;" text="BACK TO LOGIN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
       <Label fx:id="registrationMessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="95.0" prefHeight="17.0" prefWidth="600.0" textFill="RED" />
       <Label fx:id="confirmPasswordLabel" layoutX="219.0" layoutY="335.0" prefHeight="17.0" prefWidth="285.0" textFill="RED" />
    </children>

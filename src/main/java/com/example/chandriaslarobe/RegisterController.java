@@ -5,11 +5,17 @@ import com.example.chandriaslarobe.DatabaseConnection;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,7 +25,7 @@ import java.sql.Statement;
 public class RegisterController {
 
     @FXML
-    private Button closeButton;
+    private Button backToLoginButton;
     @FXML
     private Label registrationMessageLabel;
     @FXML
@@ -44,10 +50,18 @@ public class RegisterController {
         }
     }
 
-    public void closeButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) closeButton.getScene().getWindow();
-        stage.close();
-        Platform.exit();
+    public void backToLoginButtonOnAction(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
+        Stage registerStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        registerStage.setTitle("Login");
+        registerStage.setResizable(false);
+        registerStage.setScene(scene);
+        registerStage.show();
+
+        // Stage stage = (Stage) closeButton.getScene().getWindow();
+        // stage.close();
+        // Platform.exit();
     }
 
     public void registerUser() {
