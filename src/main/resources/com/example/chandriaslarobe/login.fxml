@@ -58,7 +58,7 @@
             <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
           </padding>
         </Button>
-            <Button fx:id="cancelButton" layoutX="48.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefWidth="275.0" style="-fx-background-color: #E79D97;" text="CANCEL" textFill="BLACK">
+            <Button fx:id="registerHereButton" layoutX="48.0" layoutY="342.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefWidth="275.0" style="-fx-background-color: #E79D97;" text="REGISTER HERE" textFill="BLACK">
                <padding>
                   <Insets bottom="7.0" left="70.0" right="70.0" top="7.0" />
                </padding>

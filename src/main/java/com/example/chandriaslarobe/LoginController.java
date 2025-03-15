@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -18,8 +17,6 @@ import java.sql.Statement;
 
 public class LoginController {
 
-    @FXML
-    private Button cancelButton;
     @FXML
     private Label loginMessageLabel;
     @FXML
@@ -37,9 +34,8 @@ public class LoginController {
         }
     }
 
-    public void cancelButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) cancelButton.getScene().getWindow();
-        stage.close();
+    public void registerButtonOnAction(ActionEvent event) {
+        createAccountForm();
     }
 
     public void validateLogin() {
@@ -55,7 +51,6 @@ public class LoginController {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     //loginMessageLabel.setText("You are logged in.");
-                    createAccountForm();
                 } else {
                     loginMessageLabel.setText("Invalid username or password.");
                 }
