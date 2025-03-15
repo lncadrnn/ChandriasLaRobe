@@ -26,6 +26,8 @@ public class LoginController {
     private TextField usernameTextField;
     @FXML
     private PasswordField enterPasswordField;
+    @FXML
+    private Button closeButton;
 
 
     public void loginButtonOnAction(ActionEvent event) {
@@ -39,6 +41,12 @@ public class LoginController {
 
     public void registerButtonOnAction(ActionEvent event) {
         createAccountForm(event);
+    }
+
+    public void closeButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
+        // Platform.exit();
     }
 
     public void validateLogin() {

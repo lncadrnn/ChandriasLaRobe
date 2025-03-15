@@ -70,6 +70,15 @@
                </font>
             </Button>
             <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="114.0" prefHeight="17.0" prefWidth="323.0" textFill="RED" />
+            <Button fx:id="closeButton" layoutX="319.0" layoutY="7.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
       </children>
     </AnchorPane>
   </right>
