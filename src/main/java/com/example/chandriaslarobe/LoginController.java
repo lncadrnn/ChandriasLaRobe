@@ -26,8 +26,6 @@ public class LoginController {
     private TextField usernameTextField;
     @FXML
     private PasswordField enterPasswordField;
-    @FXML
-    private Button closeButton;
 
 
     public void loginButtonOnAction(ActionEvent event) {
@@ -41,12 +39,6 @@ public class LoginController {
 
     public void registerButtonOnAction(ActionEvent event) {
         createAccountForm(event);
-    }
-
-    public void closeButtonOnAction(ActionEvent event) {
-        Stage stage = (Stage) closeButton.getScene().getWindow();
-        stage.close();
-        // Platform.exit();
     }
 
     public void validateLogin() {
@@ -74,6 +66,10 @@ public class LoginController {
 
     }
 
+    public void applyCSS(Scene scene) {
+        scene.getStylesheets().add(getClass().getResource("/com/example/chandriaslarobe/styles.css").toExternalForm());
+    }
+
     public void createAccountForm(ActionEvent event) {
         try {
             Parent registerRoot = FXMLLoader.load(getClass().getResource("register.fxml"));
@@ -82,6 +78,7 @@ public class LoginController {
             stage.setTitle("Sign Up");
             stage.show();
             stage.setY(stage.getY() - 60);
+            applyCSS(stage.getScene());
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -50,6 +50,10 @@ public class RegisterController {
         }
     }
 
+    public void applyCSS(Scene scene) {
+        scene.getStylesheets().add(getClass().getResource("/com/example/chandriaslarobe/styles.css").toExternalForm());
+    }
+
     public void backToLoginButtonOnAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
         Stage registerStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -59,10 +63,7 @@ public class RegisterController {
         registerStage.setScene(scene);
         registerStage.show();
         registerStage.setY(registerStage.getY() - -60);
-
-        // Stage stage = (Stage) closeButton.getScene().getWindow();
-        // stage.close();
-        // Platform.exit();
+        applyCSS(scene);
     }
 
     public void registerUser() {
