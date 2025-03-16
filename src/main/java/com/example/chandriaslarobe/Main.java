@@ -16,7 +16,6 @@ public class Main extends Application {
 
         //css
         scene.getStylesheets().add(getClass().getResource("/com/example/chandriaslarobe/styles.css").toExternalForm());
-
         stage.setTitle("Login");
         stage.setResizable(false);
         stage.setScene(scene);

@@ -54,6 +54,7 @@ public class LoginController {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("You are logged in.");
+                    loadDashboard();
                 } else {
                     loginMessageLabel.setText("Invalid username or password.");
                 }
@@ -77,7 +78,7 @@ public class LoginController {
             stage.setScene(new Scene(registerRoot, 600, 532));
             stage.setTitle("Sign Up");
             stage.show();
-            stage.setY(stage.getY() - 60);
+            stage.centerOnScreen();
             applyCSS(stage.getScene());
 
         } catch (Exception e) {
@@ -86,4 +87,19 @@ public class LoginController {
         }
     }
 
+    public void loadDashboard() {
+        try {
+            Parent dashboardRoot = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+            // gineget ang scene na belong sa usernameTextField
+            Stage stage = (Stage) usernameTextField.getScene().getWindow();
+            stage.setScene(new Scene(dashboardRoot, 900, 500));
+            stage.centerOnScreen();
+            stage.setTitle("Dashboard");
+            stage.show();
+            // applyCSS(stage.getScene());
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
 }

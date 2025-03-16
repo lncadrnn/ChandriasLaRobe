@@ -62,7 +62,7 @@ public class RegisterController {
         registerStage.setResizable(false);
         registerStage.setScene(scene);
         registerStage.show();
-        registerStage.setY(registerStage.getY() - -60);
+        registerStage.centerOnScreen();
         applyCSS(scene);
     }
 
