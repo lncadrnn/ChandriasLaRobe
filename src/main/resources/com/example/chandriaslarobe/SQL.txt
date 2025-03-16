@@ -1,0 +1,16 @@
+Change the information in the DatabaseConnection.java regarding the
+(DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD, DATABASE_URL)
+
+// For creating table:
+CREATE TABLE user_account (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+// For inserting data in the table manually:
+INSERT INTO user_account (firstname, lastname, username, password)
+VALUES (' ', ' ', ' ', ' ');
+

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+// change the information if different
 public class DatabaseConnection {
     private static final String DATABASE_NAME = "demo_db";
     private static final String DATABASE_USER = "root";
