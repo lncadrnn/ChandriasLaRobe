@@ -1,4 +1,4 @@
 package com.example.chandriaslarobe;
 
-public class DashboardController {
+public class MainSystemController {
 }

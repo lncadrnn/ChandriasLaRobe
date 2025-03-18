@@ -14,7 +14,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #E9EDFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane prefHeight="28.0" prefWidth="1000.0" style="-fx-background-color: #79595C;" BorderPane.alignment="CENTER" />
@@ -32,12 +31,12 @@
                         <Insets top="30.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="205.0" style="-fx-background-color: transparent;">
+                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="205.0" style="-fx-background-color: #ECECE7;">
                      <VBox.margin>
                         <Insets top="15.0" />
                      </VBox.margin>
                      <graphic>
-                        <AnchorPane prefHeight="56.0" prefWidth="221.0">
+                        <AnchorPane prefHeight="56.0" prefWidth="221.0" style="-fx-background-color: 0;">
                            <children>
                               <ImageView fitHeight="31.0" fitWidth="40.0" layoutX="16.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
