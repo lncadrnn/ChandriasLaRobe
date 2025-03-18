@@ -91,10 +91,10 @@ public class LoginController {
         try {
             Parent dashboardRoot = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
             // gineget ang scene na belong sa usernameTextField
+
             Stage stage = (Stage) usernameTextField.getScene().getWindow();
-            stage.setScene(new Scene(dashboardRoot, 900, 500));
+            stage.setScene(new Scene(dashboardRoot, 1000, 600));
             stage.centerOnScreen();
-            stage.setTitle("Dashboard");
             stage.show();
             // applyCSS(stage.getScene());
         } catch (Exception e) {
