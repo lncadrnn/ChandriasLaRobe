@@ -21,7 +21,7 @@
    <left>
       <AnchorPane prefHeight="678.0" prefWidth="205.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="139.0" prefHeight="678.0" prefWidth="205.0" style="-fx-border-color: ;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="139.0" prefHeight="678.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <ImageView fitHeight="69.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                      <image>
