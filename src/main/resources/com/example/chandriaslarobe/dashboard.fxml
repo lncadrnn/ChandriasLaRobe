@@ -36,7 +36,7 @@
                         <Insets top="15.0" />
                      </VBox.margin>
                      <graphic>
-                        <AnchorPane prefHeight="56.0" prefWidth="221.0" style="-fx-background-color: 0;">
+                        <AnchorPane prefHeight="56.0" prefWidth="221.0">
                            <children>
                               <ImageView fitHeight="31.0" fitWidth="40.0" layoutX="16.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
