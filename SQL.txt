@@ -1,3 +1,5 @@
+DESKTOP APPLICATION SQL : 
+
 Change the information in the DatabaseConnection.java regarding the
 (DATABASE_NAME, DATABASE_USER, DATABASE_PASSWORD, DATABASE_URL)
 
