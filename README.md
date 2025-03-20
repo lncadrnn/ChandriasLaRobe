@@ -1,6 +1,10 @@
 # 👗 Chandria's La Robe | Gown and Suit Management System
 
+---
+
 ## ⚠️ This is the Desktop Application for the Admin System. This is also still Under Development.
+
+---
 
 ### 📖 About the Project
 **Chandria's La Robe** is a comprehensive **gown and suit management system** designed to streamline the rental process for customers and administrators. It offers a seamless experience for browsing, scheduling, renting, and managing inventories, while providing rich analytics and customer insights for administrators.
